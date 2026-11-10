@@ -89,3 +89,7 @@ h1 span{color:var(--lat)}
 .mkey{display:none;color:var(--muted);margin-top:8px}
 .mkey i{display:inline-block;width:9px;height:9px;margin:0 6px 0 0}
 @media (max-width:640px){.mkey{display:block}}
+::selection{background:#ececf0;color:#0e0e11}
+html{-webkit-tap-highlight-color:transparent;accent-color:#ececf0}
+.t-text{caret-color:#ececf0}
+select{-webkit-appearance:none;appearance:none;border-radius:0}

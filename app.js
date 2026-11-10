@@ -51,7 +51,7 @@ GLYPHS.forEach(it=>{
 function rowImg(it,r){
   const b=el('div','sheet'); b.setAttribute('role','button'); b.tabIndex=0; b.addEventListener('keydown',e=>{if(e.key==='Enter')b.click();});
   const img=el('img'); img.loading='lazy'; img.decoding='async';
-  img.src='img/row_'+it.tag+'_'+(st.ita?'ita':'rom')+'_'+r+'.webp';
+  img.src='img/row_'+it.tag+'_'+(st.ita?'ita':'rom')+'_'+r+'.webp?v=3';
   img.alt=it.name+', '+WID[r]+(st.ita?' Italic':'')+', Lateral left and XG Flex Custom right, seven weights';
   img.addEventListener('load',()=>{img.style.maxWidth=Math.round(img.naturalWidth/1.6)+'px';img.style.margin='0';});
   b.appendChild(img); b.onclick=()=>openLB(img.src,img.alt);
