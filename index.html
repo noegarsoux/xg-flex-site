@@ -1,225 +1,62 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>XG Flex Custom · face à Lateral</title>
-<meta name="description" content="XG Flex Custom version 4 : 98 styles comparés glyphe par glyphe avec Lateral.">
+<title>Lateral / XG Flex Custom</title>
+<meta name="description" content="Lateral and XG Flex Custom side by side, in 98 styles.">
 <meta name="theme-color" content="#0e0e11">
 <link rel="preload" href="fonts/c/ExpandedBlack.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/c/StandardRegular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/c/StandardMedium.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="fonts.css">
 <link rel="stylesheet" href="style.css">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230e0e11'/%3E%3Ctext x='16' y='22' font-family='Arial Black,Arial' font-weight='900' font-size='15' text-anchor='middle' fill='%23ff4d3a'%3EXG%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230e0e11'/%3E%3Ctext x='16' y='22' font-family='Arial Black,Arial' font-weight='900' font-size='15' text-anchor='middle' fill='%23ececf0'%3EXG%3C/text%3E%3C/svg%3E">
 </head>
 <body>
-<div class="grain" aria-hidden="true"></div>
 
-<header class="top">
-  <a class="brand" href="#top" aria-label="Haut de page"><span class="b-xg">XG</span><span class="b-sep">/</span><span class="b-lat">Lateral</span></a>
-  <nav class="links">
-    <a href="#famille">Famille</a>
-    <a href="#essai">Essai</a>
-    <a href="#glyphes">Glyphes</a>
-    <a href="#chiffres">Chiffres</a>
-    <a href="#notes">Notes</a>
-  </nav>
-  <a class="cta small" href="dl/XG-Flex-Custom-v4-TTF.zip" download>Télécharger</a>
+<header class="bar">
+  <a href="#top" class="name">XG Flex Custom</a>
+  <p class="key"><span><i class="k-lat"></i>Lateral</span><span><i class="k-xg"></i>XG Flex Custom</span></p>
+  <a href="dl/XG-Flex-Custom-v4-TTF.zip" download class="dl">Download</a>
 </header>
 
 <main id="top">
+  <section class="intro">
+    <h1><span>Lateral</span><br>XG Flex Custom</h1>
+    <p>Side by side, in every width and weight. Version 4.</p>
+    <p class="mkey"><i class="k-lat"></i>Lateral &nbsp; <i class="k-xg"></i>XG Flex Custom</p>
+  </section>
 
-<!-- HERO -->
-<section class="hero">
-  <p class="eyebrow"><span class="dot"></span>Version 4 · 10 novembre 2026 · 98 styles</p>
-  <h1 class="hero-word" id="heroWord" aria-label="XG Flex">XG Flex</h1>
-  <div class="hero-meta">
-    <p class="style-readout" id="heroStyle">Expanded Black</p>
-    <p class="hint">Bouge la souris ou le doigt sur le titre : la largeur suit l’horizontale, la graisse la verticale.</p>
+  <div class="controls">
+    <nav class="index" id="index" aria-label="Glyphs"></nav>
+    <div class="ctl" id="widths" role="group" aria-label="Width"></div>
+    <div class="ctl" id="slant" role="group" aria-label="Style"></div>
   </div>
-  <p class="lead">XG Flex Custom reprend les 98 styles de XG Flex et redessine huit glyphes, la ponctuation et les signes de calcul pour se rapprocher de <span class="lat-ink">Lateral</span>. Ce site les met côte à côte, style par style.</p>
-  <div class="hero-actions">
-    <a class="cta" href="#glyphes">Comparer les glyphes</a>
-    <a class="ghost" href="#essai">Essayer en direct</a>
-  </div>
-  <dl class="stats">
-    <div><dt>98</dt><dd>styles, 7 chasses × 7 graisses × romain et italique</dd></div>
-    <div><dt>72 → 89 %</dt><dd>surface commune avec Lateral sur les 8 glyphes refaits, en moyenne</dd></div>
-    <div><dt>8 + 19</dt><dd>glyphes refaits face à Lateral, puis signes dessinés sur ses règles</dd></div>
-    <div><dt>764 302</dt><dd>paires de crénage relues une à une face à la base</dd></div>
-  </dl>
-</section>
+  <div id="specimens"></div>
 
-<!-- MARQUEE -->
-<div class="marquee" aria-hidden="true"><div class="mq-track" id="mq"></div></div>
-
-<!-- FAMILY -->
-<section class="block" id="famille">
-  <div class="sec-head">
-    <p class="num">01</p>
-    <h2>La famille entière</h2>
-    <p class="sec-lead">Sept chasses en lignes, sept graisses en colonnes. Touche une case pour l’ouvrir dans l’essai.</p>
-  </div>
-  <div class="toolbar">
-    <div class="seg" role="group" aria-label="Style">
-      <button type="button" data-fam-ita="0" aria-pressed="true">Romains</button>
-      <button type="button" data-fam-ita="1" aria-pressed="false">Italiques</button>
-    </div>
-    <label class="field inline"><span>Texte</span><input type="text" id="famText" value="Ra6" maxlength="8"></label>
-  </div>
-  <div class="matrix-wrap"><div class="matrix" id="matrix"></div></div>
-</section>
-
-<!-- TESTER -->
-<section class="block" id="essai">
-  <div class="sec-head">
-    <p class="num">02</p>
-    <h2>Essai en direct</h2>
-    <p class="sec-lead">XG Flex Custom face à XG Flex tel qu’il était avant les changements. Le mode superposé montre en rouge ce que Custom ajoute, en cyan ce qu’il retire, et en blanc ce qui ne change pas.</p>
-  </div>
-  <div class="tester">
-    <div class="controls">
-      <label class="field grow"><span>Texte</span><input type="text" id="tText" value="XG Quiz 2069, Rare Qualité ? Oui !"></label>
-      <label class="field"><span>Chasse <b id="tWidVal">Expanded</b></span><input type="range" id="tWid" min="0" max="6" step="1" value="5"></label>
-      <label class="field"><span>Graisse <b id="tWgtVal">Black</b></span><input type="range" id="tWgt" min="0" max="6" step="1" value="5"></label>
-      <label class="field"><span>Corps <b id="tSizeVal">88 px</b></span><input type="range" id="tSize" min="24" max="200" step="2" value="88"></label>
-      <div class="toggles">
-        <label class="tog"><input type="checkbox" id="tIta"><span>Italique</span></label>
-        <label class="tog"><input type="checkbox" id="tAF"><span>a avec pied</span></label>
-        <label class="tog"><input type="checkbox" id="tRP"><span>R à jambe droite</span></label>
-      </div>
-      <div class="seg" role="group" aria-label="Affichage">
-        <button type="button" data-view="side" aria-pressed="true">Côte à côte</button>
-        <button type="button" data-view="over" aria-pressed="false">Superposé</button>
+  <section class="tester" id="tester">
+    <div class="t-head">
+      <h2>Type tester</h2>
+      <div class="t-ctrl">
+        <select id="tWid" aria-label="Width"></select>
+        <select id="tWgt" aria-label="Weight"></select>
+        <button type="button" id="tIta" aria-pressed="false">Italic</button>
       </div>
     </div>
-    <div class="lines" id="tLines">
-      <div class="line"><span class="tag xg">XG Flex Custom v4</span><div class="txt" id="tCustom" contenteditable="false"></div></div>
-      <div class="line base"><span class="tag">XG Flex, base</span><div class="txt" id="tBase"></div></div>
-    </div>
-    <div class="overlay" id="tOver" hidden>
-      <span class="tag"><i class="sw xg"></i>Custom seul <i class="sw base"></i>Base seule <i class="sw both"></i>Commun</span>
-      <div class="ov-stack"><div class="txt o-base" id="oBase"></div><div class="txt o-custom" id="oCustom"></div></div>
-    </div>
-    <div class="waterfall" id="tFall"></div>
-  </div>
-</section>
-
-<!-- GLYPHS -->
-<section class="block" id="glyphes">
-  <div class="sec-head">
-    <p class="num">03</p>
-    <h2>Signe par signe, dans les 98 styles</h2>
-    <p class="sec-lead">Chaque planche montre les sept chasses en lignes et les sept graisses en colonnes. « Sur Lateral » superpose le glyphe à celui de Lateral : <span class="lat-ink">bleu</span> pour Lateral seul, <span class="xg-ink">rouge</span> pour Custom seul, blanc pour ce qui est commun. Pour les signes que Lateral Trial ne contient pas, la comparaison se fait avec la base.</p>
-  </div>
-  <nav class="jump" id="jump" aria-label="Glyphes"></nav>
-  <div id="plates" class="plates"></div>
-</section>
-
-<!-- STRIPS -->
-<section class="block" id="bandes">
-  <div class="sec-head">
-    <p class="num">04</p>
-    <h2>Trois bandes à regarder de près</h2>
-  </div>
-  <div class="strips">
-    <figure class="strip">
-      <div class="strip-head"><h3>Les quatre paires X, avant et après</h3><button class="plain" type="button" data-open="img/bande_crenage.webp">Agrandir</button></div>
-      <button class="sheet" type="button" data-open="img/bande_crenage.webp"><img src="img/bande_crenage.webp" alt="X G, X O, X C et X Q dans huit styles, version 3 à gauche et version 4 à droite" loading="lazy"></button>
-      <figcaption>À gauche la version 3, où seule X G est serrée. À droite la version 4 : X C, X O et X Q reprennent exactement la valeur de X G. En UltraCompressed Heavy, les trois paires se desserrent de 7 millièmes, comme X G l’avait fait.</figcaption>
-    </figure>
-    <figure class="strip">
-      <div class="strip-head"><h3>Virgule et apostrophe selon la dose</h3><button class="plain" type="button" data-open="img/bande_virgule.webp">Agrandir</button></div>
-      <button class="sheet" type="button" data-open="img/bande_virgule.webp"><img src="img/bande_virgule.webp" alt="Virgule et apostrophe de Lateral puis à 0, 10, 25, 50, 90 et 100 % vers Roboto" loading="lazy"></button>
-      <figcaption>De gauche à droite : Lateral, puis la part du chemin faite vers la forme de Roboto. 0 % est la version 2, 10 % est dans les fonts depuis la version 3.</figcaption>
-    </figure>
-    <figure class="strip">
-      <div class="strip-head"><h3>Trois formes de point possibles</h3><button class="plain" type="button" data-open="img/bande_points.webp">Agrandir</button></div>
-      <button class="sheet" type="button" data-open="img/bande_points.webp"><img src="img/bande_points.webp" alt="Points ronds actuels, rectangles de Lateral et points de la base" loading="lazy"></button>
-      <figcaption>À gauche, ce qui est dans les fonts : des ellipses de même surface que le rectangle de Lateral. Au centre, les rectangles de Lateral. À droite, les points de la base sous les nouvelles tiges.</figcaption>
-    </figure>
-  </div>
-</section>
-
-<!-- FIGURES -->
-<section class="block" id="chiffres">
-  <div class="sec-head">
-    <p class="num">05</p>
-    <h2>Recouvrement avec Lateral</h2>
-    <p class="sec-lead">Part de surface commune entre le glyphe et celui de Lateral, à corps égal et calés comme dans les fonts, en moyenne sur les 98 styles.</p>
-  </div>
-  <div class="bars" id="bars" role="table" aria-label="Recouvrement avec Lateral"></div>
-  <p class="foot">Le a sans pied s’éloigne volontairement de Lateral, d’où son score plus bas que celui du a avec pied. La virgule et l’apostrophe étaient à 98,7 % avant les 10 % vers Roboto. Les nouveaux signes n’ont pas de ligne : Lateral Trial ne les contient pas.</p>
-</section>
-
-<!-- NOTES -->
-<section class="block" id="notes">
-  <div class="sec-head">
-    <p class="num">06</p>
-    <h2>Ce qui a changé</h2>
-  </div>
-  <div class="timeline">
-    <article class="ver">
-      <p class="v">v4</p>
-      <div>
-        <h3>X C, X O et X Q au crénage de X G</h3>
-        <p>X devant C, O et Q prend exactement la valeur de X G, sans nouvelle mesure : −32 millièmes au lieu de −10 en Standard Regular, −101 au lieu de −11 en Expanded Black, −161 au lieu de +5 en UltraWide Heavy. Les formes accentuées suivent, ainsi que Ø et Œ : 44 capitales en tout derrière X. Aucun contour ni aucune chasse ne change.</p>
-      </div>
-    </article>
-    <article class="ver">
-      <p class="v">v3</p>
-      <div>
-        <h3>Ponctuation et signes de calcul</h3>
-        <p>Virgule et apostrophe ramenées de 10 % vers Roboto. ? ! ¿ ¡ . : ; · … + − = × ÷ ± ≠ &lt; &gt; ≤ ≥ dessinés sur les règles de Lateral : barres à l’épaisseur de son trait d’union, blanc sous le point du i, même longueur de barre et même chasse pour aligner les signes en colonne.</p>
-      </div>
-    </article>
-    <article class="ver">
-      <p class="v">v2</p>
-      <div>
-        <h3>Crénage entre X et G</h3>
-        <p>Le blanc entre X et G était plus large que chez Lateral dans 87 styles sur 98, de 41 % en Expanded Black. La paire retrouve le blanc mesuré dans Lateral.</p>
-      </div>
-    </article>
-    <article class="ver">
-      <p class="v">v1</p>
-      <div>
-        <h3>6, 9, 2, a, Q, R, virgule et apostrophe</h3>
-        <p>Crosse longue coupée net pour le 6 et le 9, diagonale courbe pour le 2, a sans pied à chasse resserrée, queue du Q uniquement sortante, R à jambe arrondie avec le ressaut au pied. Le a avec pied et le R à jambe droite restent dans les fonts sur U+E000 et U+E001.</p>
-      </div>
-    </article>
-  </div>
-  <div class="cards">
-    <article><h3>Ce qui vient de Lateral</h3><p>Des cotes seulement : positions, angles et tension des courbes. Aucun contour n’est repris, chaque point est calculé avec les graisses de XG Flex. Pour les nouveaux signes, seules des mesures générales servent.</p></article>
-    <article><h3>Construction</h3><p>Pas d’opération booléenne ni de déformation : chaque contour est écrit point par point à partir des repères du glyphe XG Flex du même style. Les italiques sont redressés, construits, puis réinclinés.</p></article>
-    <article><h3>Contrôles</h3><p>Les 764 302 paires de crénage des 98 fonts sont relues face à la base : seules les 44 paires attendues par style ont changé. Aucune paire X ne se touche, le plus petit écart est de 14 millièmes en UltraCompressed Heavy.</p></article>
-    <article><h3>Pas encore touché</h3><p>Les points du i, du j et des accents gardent la forme de la base en attendant le choix sur les points. Le trait d’union, les tirets, les parenthèses, les guillemets « » et les signes % &amp; @ # * restent ceux de la base.</p></article>
-  </div>
-</section>
-
-<!-- DOWNLOAD -->
-<section class="dl-block" id="telecharger">
-  <p class="dl-word" aria-hidden="true">XG</p>
-  <div class="dl-txt">
-    <h2>XG Flex Custom v4</h2>
-    <p>Les 98 fonts en TTF, la licence SIL Open Font License 1.1, l’historique et la notice. La famille s’installe à côté de XG Flex sans le remplacer.</p>
-    <a class="cta" href="dl/XG-Flex-Custom-v4-TTF.zip" download>Télécharger le zip · 5 Mo</a>
-  </div>
-</section>
-
+    <div class="t-text" id="tText" contenteditable="true" spellcheck="false">Rare 2069 Quiz, XG Qualia?</div>
+  </section>
 </main>
 
-<footer class="foot-site">
-  <p>XG Flex Custom est distribué sous SIL Open Font License 1.1 et ne contient aucun élément de Lateral.</p>
-  <p>Lateral est une police commerciale. Elle n’apparaît ici que dans des images de comparaison rendues à partir de Lateral Trial ; aucun fichier de Lateral n’est servi par ce site.</p>
+<footer class="foot">
+  <p>XG Flex Custom is released under the SIL Open Font License 1.1. <a href="dl/XG-Flex-Custom-v4-TTF.zip" download>Download the 98 TTF files</a>.</p>
+  <p>Lateral is a commercial typeface. It appears here only as images; no Lateral font files are served.</p>
 </footer>
 
 <div class="lightbox" id="lb" hidden>
-  <div class="lb-bar"><span id="lbTitle"></span><button type="button" class="plain" id="lbClose">Fermer · Échap</button></div>
-  <div class="lb-scroll" id="lbScroll"><img id="lbImg" alt=""></div>
+  <button type="button" class="lb-close" id="lbClose">Close</button>
+  <div class="lb-scroll"><img id="lbImg" alt=""></div>
 </div>
 
-<script src="data.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
